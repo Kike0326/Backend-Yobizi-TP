@@ -27,4 +27,7 @@ public class Contrato implements Serializable{
     @ManyToOne
     @JoinColumn(name ="Empleador_id")
     private Empleador id_Empleador;
+    @ManyToOne
+    @JoinColumn(name ="Distrito_id")
+    private Distrito id_Distrito;
 }
