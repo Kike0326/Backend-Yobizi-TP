@@ -4,7 +4,6 @@ import backend.project.repositories.EmpleadorRepository;
 import backend.project.services.EmpleadorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import javax.persistence.EntityNotFoundException;
 import java.util.List;
 
@@ -27,8 +26,10 @@ public class IEmpleadorImpl implements EmpleadorService {
     @Override
     public Empleador findById(int id) {
         Empleador empleador = empleadorRepository.findById(id).orElse(null);
+        System.out.println(id);
         if (empleador == null) {
 throw new EntityNotFoundException("No se encuentra Empleador con el siguiente id: "+String.valueOf(id));
+
         }
         return empleador;
     }
@@ -42,4 +43,5 @@ throw new EntityNotFoundException("No se encuentra Empleador con el siguiente id
     public List<Empleador> findEmpleadorByName(String name) {
         return List.of();
     }
+
 }

@@ -4,27 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="758ae109-b322-4d56-a613-07b3a9b18ac7" name="Changes" comment="Creación clases Salguero">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/backend/project/entities/Asesor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/backend/project/entities/ContratoXTrabajador.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/backend/project/entities/DistritoXTrabajador.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/backend/project/entities/Ocupacion.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/backend/project/entities/OcupacionXTrabajador.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/backend/project/entities/Trabajador.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/backend/project/entities/Trabajador_Interesado.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/backend/project/entities/Users.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/backend/project/exceptions/ErrorMessageGeneric.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/backend/project/exceptions/ExceptionHandlerController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/backend/project/exceptions/IncompleteDataException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/backend/project/exceptions/KeyRepeatedDataException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/backend/project/exceptions/ResourceNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/backend/project/repositories/EmpleadorRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/backend/project/services/EmpleadorService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/backend/project/servicesimpl/IEmpleadorImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+    <list default="true" id="758ae109-b322-4d56-a613-07b3a9b18ac7" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/backend/project/controllers/EmpleadorController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/backend/project/dtos/EmpleadorDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/backend PC1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/backend Yobizi TP.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/backend/project/entities/Contrato.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/backend/project/entities/Contrato.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/backend/project/entities/Empleador.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/backend/project/entities/Empleador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/backend/project/servicesimpl/IEmpleadorImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/backend/project/servicesimpl/IEmpleadorImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,18 +34,21 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Kike0326"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Kike0326&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Kike0326/Backend-Yobizi-TP.git",
-    "accountId": "1253f01f-73e2-4cc8-8781-01193e4133a5"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Kike0326/Backend-Yobizi-TP.git&quot;,
+    &quot;accountId&quot;: &quot;1253f01f-73e2-4cc8-8781-01193e4133a5&quot;
   }
-}]]></component>
+}</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
@@ -76,18 +71,26 @@
     "Spring Boot.BackendApplication.executor": "Run",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/Backend Yobizi TP/backend/src/main/java/backend/project/exceptions",
+    "last_opened_file_path": "D:/DentiBrook_Backend-master",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
+    ]
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Backend Yobizi TP\backend\src\main\java\backend\project\exceptions" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="backend.project.dtos" />
     </key>
   </component>
   <component name="RunManager">
@@ -116,7 +119,11 @@
       <option name="presentableId" value="Default" />
       <updated>1714256962257</updated>
       <workItem from="1714256963399" duration="136000" />
-      <workItem from="1714322476122" duration="10290000" />
+      <workItem from="1714322476122" duration="15720000" />
+      <workItem from="1714343237527" duration="5890000" />
+      <workItem from="1714353322026" duration="992000" />
+      <workItem from="1714377624937" duration="5284000" />
+      <workItem from="1714403576213" duration="6704000" />
     </task>
     <task id="LOCAL-00001" summary="Creación clases Salguero">
       <option name="closed" value="true" />
@@ -126,7 +133,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714329848476</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Actualización de Entidades y Desarrollo de la Clase Empleador">
+      <option name="closed" value="true" />
+      <created>1714336706624</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1714336706625</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -134,6 +149,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Creación clases Salguero" />
-    <option name="LAST_COMMIT_MESSAGE" value="Creación clases Salguero" />
+    <MESSAGE value="Actualización de Entidades y Desarrollo de la Clase Empleador" />
+    <option name="LAST_COMMIT_MESSAGE" value="Actualización de Entidades y Desarrollo de la Clase Empleador" />
   </component>
 </project>
