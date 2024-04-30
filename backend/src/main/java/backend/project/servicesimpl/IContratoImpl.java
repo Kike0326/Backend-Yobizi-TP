@@ -1,7 +1,6 @@
 package backend.project.servicesimpl;
 
 import backend.project.entities.Contrato;
-import backend.project.entities.Distrito;
 import backend.project.repositories.ContratoRepository;
 import backend.project.services.ContratoService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,6 +35,6 @@ public class IContratoImpl implements ContratoService {
 
     @Override
     public List<Contrato> findAllContrato() {
-        return List.of();
+        return contratoRepository.findAll();
     }
 }

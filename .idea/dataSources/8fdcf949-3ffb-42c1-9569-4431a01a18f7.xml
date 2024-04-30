@@ -3,17 +3,9 @@
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.52">
     <root id="1">
       <DateStyle>dmy</DateStyle>
-      <Grants>1||-9223372036854775808|c|G
-1||10|c|G
-1||10|C|G
-1||10|T|G
-4||-9223372036854775808|c|G
-4||10|c|G
-4||10|C|G
-4||10|T|G</Grants>
-      <IntrospectionStateNumber>752</IntrospectionStateNumber>
+      <IntrospectionStateNumber>790</IntrospectionStateNumber>
       <ServerVersion>16.2</ServerVersion>
-      <StartupTime>1714242828</StartupTime>
+      <StartupTime>1714367029</StartupTime>
       <TimeZones>true ACDT
 true ACSST
 false ACST
@@ -808,7 +800,7 @@ false Zulu
 14643||10|C|G
 14643||-9223372036854775808|U|G
 14643||10|U|G</Grants>
-      <IntrospectionStateNumber>752</IntrospectionStateNumber>
+      <IntrospectionStateNumber>790</IntrospectionStateNumber>
       <ObjectId>16398</ObjectId>
       <OwnerName>postgres</OwnerName>
     </database>
@@ -817,50 +809,50 @@ false Zulu
       <ObjectId>5</ObjectId>
       <OwnerName>postgres</OwnerName>
     </database>
-    <role id="4" parent="1" name="pg_database_owner">
+    <role id="4" parent="1" name="pg_checkpoint">
+      <ObjectId>4544</ObjectId>
+    </role>
+    <role id="5" parent="1" name="pg_create_subscription">
+      <ObjectId>6304</ObjectId>
+    </role>
+    <role id="6" parent="1" name="pg_database_owner">
       <ObjectId>6171</ObjectId>
     </role>
-    <role id="5" parent="1" name="pg_read_all_data">
-      <ObjectId>6181</ObjectId>
+    <role id="7" parent="1" name="pg_execute_server_program">
+      <ObjectId>4571</ObjectId>
     </role>
-    <role id="6" parent="1" name="pg_write_all_data">
-      <ObjectId>6182</ObjectId>
-    </role>
-    <role id="7" parent="1" name="pg_monitor">
+    <role id="8" parent="1" name="pg_monitor">
       <ObjectId>3373</ObjectId>
       <RoleGrants>3374
 3375
 3377</RoleGrants>
     </role>
-    <role id="8" parent="1" name="pg_read_all_settings">
+    <role id="9" parent="1" name="pg_read_all_data">
+      <ObjectId>6181</ObjectId>
+    </role>
+    <role id="10" parent="1" name="pg_read_all_settings">
       <ObjectId>3374</ObjectId>
     </role>
-    <role id="9" parent="1" name="pg_read_all_stats">
+    <role id="11" parent="1" name="pg_read_all_stats">
       <ObjectId>3375</ObjectId>
     </role>
-    <role id="10" parent="1" name="pg_stat_scan_tables">
-      <ObjectId>3377</ObjectId>
-    </role>
-    <role id="11" parent="1" name="pg_read_server_files">
+    <role id="12" parent="1" name="pg_read_server_files">
       <ObjectId>4569</ObjectId>
     </role>
-    <role id="12" parent="1" name="pg_write_server_files">
-      <ObjectId>4570</ObjectId>
-    </role>
-    <role id="13" parent="1" name="pg_execute_server_program">
-      <ObjectId>4571</ObjectId>
-    </role>
-    <role id="14" parent="1" name="pg_signal_backend">
+    <role id="13" parent="1" name="pg_signal_backend">
       <ObjectId>4200</ObjectId>
     </role>
-    <role id="15" parent="1" name="pg_checkpoint">
-      <ObjectId>4544</ObjectId>
+    <role id="14" parent="1" name="pg_stat_scan_tables">
+      <ObjectId>3377</ObjectId>
     </role>
-    <role id="16" parent="1" name="pg_use_reserved_connections">
+    <role id="15" parent="1" name="pg_use_reserved_connections">
       <ObjectId>4550</ObjectId>
     </role>
-    <role id="17" parent="1" name="pg_create_subscription">
-      <ObjectId>6304</ObjectId>
+    <role id="16" parent="1" name="pg_write_all_data">
+      <ObjectId>6182</ObjectId>
+    </role>
+    <role id="17" parent="1" name="pg_write_server_files">
+      <ObjectId>4570</ObjectId>
     </role>
     <role id="18" parent="1" name="postgres">
       <BypassRls>1</BypassRls>
@@ -4232,86 +4224,224 @@ false Zulu
     <schema id="264" parent="2" name="public">
       <Comment>standard public schema</Comment>
       <Current>1</Current>
-      <IntrospectionStateNumber>752</IntrospectionStateNumber>
-      <LastIntrospectionLocalTimestamp>2024-04-28.22:47:16</LastIntrospectionLocalTimestamp>
+      <IntrospectionStateNumber>790</IntrospectionStateNumber>
+      <LastIntrospectionLocalTimestamp>2024-04-30.09:24:38</LastIntrospectionLocalTimestamp>
       <ObjectId>2200</ObjectId>
       <StateNumber>524</StateNumber>
       <OwnerName>pg_database_owner</OwnerName>
     </schema>
-    <sequence id="265" parent="264" name="empleador_id_empleador_seq">
+    <sequence id="265" parent="264" name="contrato_id_contrato_seq">
       <DasType>integer|0s</DasType>
-      <ObjectId>16420</ObjectId>
+      <ObjectId>24590</ObjectId>
       <SequenceIdentity>1</SequenceIdentity>
       <StartValue>1</StartValue>
-      <StateNumber>751</StateNumber>
+      <StateNumber>764</StateNumber>
       <OwnerName>postgres</OwnerName>
     </sequence>
-    <table id="266" parent="264" name="empleador">
-      <ObjectId>16421</ObjectId>
-      <StateNumber>751</StateNumber>
+    <sequence id="266" parent="264" name="distrito_id_distrito_seq">
+      <DasType>integer|0s</DasType>
+      <ObjectId>24597</ObjectId>
+      <SequenceIdentity>1</SequenceIdentity>
+      <StartValue>1</StartValue>
+      <StateNumber>765</StateNumber>
+      <OwnerName>postgres</OwnerName>
+    </sequence>
+    <sequence id="267" parent="264" name="empleador_id_empleador_seq">
+      <DasType>integer|0s</DasType>
+      <ObjectId>16441</ObjectId>
+      <SequenceIdentity>1</SequenceIdentity>
+      <StartValue>1</StartValue>
+      <StateNumber>761</StateNumber>
+      <OwnerName>postgres</OwnerName>
+    </sequence>
+    <table id="268" parent="264" name="contrato">
+      <ObjectId>24591</ObjectId>
+      <StateNumber>789</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <column id="267" parent="266" name="id_empleador">
+    <table id="269" parent="264" name="distrito">
+      <ObjectId>24598</ObjectId>
+      <StateNumber>766</StateNumber>
+      <AccessMethodId>2</AccessMethodId>
+      <OwnerName>postgres</OwnerName>
+    </table>
+    <table id="270" parent="264" name="empleador">
+      <ObjectId>16442</ObjectId>
+      <StateNumber>767</StateNumber>
+      <AccessMethodId>2</AccessMethodId>
+      <OwnerName>postgres</OwnerName>
+    </table>
+    <column id="271" parent="268" name="id_contrato">
+      <DasType>integer|0s</DasType>
+      <DefaultExpression>nextval(&apos;contrato_id_contrato_seq&apos;::regclass)</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StateNumber>764</StateNumber>
+      <SequenceId>24590</SequenceId>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="272" parent="268" name="estado_contrato">
+      <DasType>varchar(50)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StateNumber>764</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="273" parent="268" name="fecha_contrato">
+      <DasType>timestamp|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StateNumber>764</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <column id="274" parent="268" name="ubicacion_contrato">
+      <DasType>varchar(50)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+      <StateNumber>764</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="275" parent="268" name="distrito_id">
+      <DasType>integer|0s</DasType>
+      <Position>6</Position>
+      <StateNumber>764</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="276" parent="268" name="empleador_id">
+      <DasType>integer|0s</DasType>
+      <Position>7</Position>
+      <StateNumber>764</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="277" parent="268" name="monto_contrato">
+      <DasType>numeric|0s</DasType>
+      <Position>10</Position>
+      <StateNumber>789</StateNumber>
+      <TypeId>1700</TypeId>
+    </column>
+    <foreign-key id="278" parent="268" name="fkb05oiarkh2vbb73ootmaayqf9">
+      <ColNames>distrito_id</ColNames>
+      <ObjectId>24604</ObjectId>
+      <StateNumber>766</StateNumber>
+      <RefKeyColPositions>1</RefKeyColPositions>
+      <RefTableId>24598</RefTableId>
+    </foreign-key>
+    <foreign-key id="279" parent="268" name="fk33srawawdp78ami6o1vi80t4w">
+      <ColNames>empleador_id</ColNames>
+      <ObjectId>24609</ObjectId>
+      <StateNumber>767</StateNumber>
+      <RefKeyColPositions>1</RefKeyColPositions>
+      <RefTableId>16442</RefTableId>
+    </foreign-key>
+    <index id="280" parent="268" name="contrato_pkey">
+      <ColNames>id_contrato</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>24595</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>776</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+    </index>
+    <key id="281" parent="268" name="contrato_pkey">
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>24596</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>764</StateNumber>
+      <UnderlyingIndexId>24595</UnderlyingIndexId>
+    </key>
+    <column id="282" parent="269" name="id_distrito">
+      <DasType>integer|0s</DasType>
+      <DefaultExpression>nextval(&apos;distrito_id_distrito_seq&apos;::regclass)</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StateNumber>765</StateNumber>
+      <SequenceId>24597</SequenceId>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="283" parent="269" name="nombre_distrito">
+      <DasType>varchar(50)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StateNumber>765</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="284" parent="269" name="distrito_pkey">
+      <ColNames>id_distrito</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>24602</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>765</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+    </index>
+    <key id="285" parent="269" name="distrito_pkey">
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>24603</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>765</StateNumber>
+      <UnderlyingIndexId>24602</UnderlyingIndexId>
+    </key>
+    <column id="286" parent="270" name="id_empleador">
       <DasType>integer|0s</DasType>
       <DefaultExpression>nextval(&apos;empleador_id_empleador_seq&apos;::regclass)</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <StateNumber>751</StateNumber>
-      <SequenceId>16420</SequenceId>
+      <StateNumber>761</StateNumber>
+      <SequenceId>16441</SequenceId>
       <TypeId>23</TypeId>
     </column>
-    <column id="268" parent="266" name="apellido_empleador">
+    <column id="287" parent="270" name="apellido_empleador">
       <DasType>varchar(50)|0s</DasType>
       <Position>2</Position>
-      <StateNumber>751</StateNumber>
+      <StateNumber>761</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="269" parent="266" name="celular_empleador">
+    <column id="288" parent="270" name="celular_empleador">
       <DasType>varchar(9)|0s</DasType>
       <Position>3</Position>
-      <StateNumber>751</StateNumber>
+      <StateNumber>761</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="270" parent="266" name="correo_empleador">
+    <column id="289" parent="270" name="correo_empleador">
       <DasType>varchar(50)|0s</DasType>
       <Position>4</Position>
-      <StateNumber>751</StateNumber>
+      <StateNumber>761</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="271" parent="266" name="direccion_empleador">
+    <column id="290" parent="270" name="direccion_empleador">
       <DasType>varchar(50)|0s</DasType>
       <Position>5</Position>
-      <StateNumber>751</StateNumber>
+      <StateNumber>761</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="272" parent="266" name="fecha_nacimiento_empleador">
+    <column id="291" parent="270" name="fecha_nacimiento_empleador">
       <DasType>timestamp|0s</DasType>
       <Position>6</Position>
-      <StateNumber>751</StateNumber>
+      <StateNumber>761</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="273" parent="266" name="nombre_empleador">
+    <column id="292" parent="270" name="nombre_empleador">
       <DasType>varchar(50)|0s</DasType>
       <Position>7</Position>
-      <StateNumber>751</StateNumber>
+      <StateNumber>761</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="274" parent="266" name="empleador_pkey">
+    <index id="293" parent="270" name="empleador_pkey">
       <ColNames>id_empleador</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>16425</ObjectId>
+      <ObjectId>16446</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>751</StateNumber>
+      <StateNumber>761</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="275" parent="266" name="empleador_pkey">
+    <key id="294" parent="270" name="empleador_pkey">
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>16426</ObjectId>
+      <ObjectId>16447</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>751</StateNumber>
-      <UnderlyingIndexId>16425</UnderlyingIndexId>
+      <StateNumber>761</StateNumber>
+      <UnderlyingIndexId>16446</UnderlyingIndexId>
     </key>
   </database-model>
 </dataSource>
