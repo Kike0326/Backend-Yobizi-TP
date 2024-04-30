@@ -4,10 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="758ae109-b322-4d56-a613-07b3a9b18ac7" name="Changes" comment="Actualizacion Entidad Contrato">
+    <list default="true" id="758ae109-b322-4d56-a613-07b3a9b18ac7" name="Changes" comment="Actualizacion Entidad Distrito">
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/backend/project/controllers/ContratoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/backend/project/controllers/DistritoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/backend/project/repositories/ContratoRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/backend/project/repositories/DistritoRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/backend/project/services/ContratoService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/backend/project/services/DistritoService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/backend/project/servicesimpl/IContratoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/backend/project/servicesimpl/IDistritoImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/backend/project/entities/Contrato.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/backend/project/entities/Contrato.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/backend/project/entities/Distrito.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/backend/project/entities/Distrito.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/backend/project/controllers/EmpleadorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/backend/project/controllers/EmpleadorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/backend/project/servicesimpl/IEmpleadorImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/backend/project/servicesimpl/IEmpleadorImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,6 +76,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.customizations",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -114,7 +123,7 @@
       <workItem from="1714343237527" duration="5890000" />
       <workItem from="1714353322026" duration="992000" />
       <workItem from="1714377624937" duration="5284000" />
-      <workItem from="1714403576213" duration="7636000" />
+      <workItem from="1714403576213" duration="17876000" />
     </task>
     <task id="LOCAL-00001" summary="Creación clases Salguero">
       <option name="closed" value="true" />
@@ -140,7 +149,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714411207438</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Actualizacion Entidad Distrito">
+      <option name="closed" value="true" />
+      <created>1714412370544</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1714412370544</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -150,6 +167,7 @@
     <MESSAGE value="Creación clases Salguero" />
     <MESSAGE value="Actualización de Entidades y Desarrollo de la Clase Empleador" />
     <MESSAGE value="Actualizacion Entidad Contrato" />
-    <option name="LAST_COMMIT_MESSAGE" value="Actualizacion Entidad Contrato" />
+    <MESSAGE value="Actualizacion Entidad Distrito" />
+    <option name="LAST_COMMIT_MESSAGE" value="Actualizacion Entidad Distrito" />
   </component>
 </project>
