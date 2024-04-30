@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="758ae109-b322-4d56-a613-07b3a9b18ac7" name="Changes" comment="Actualizacion Entidad Contrato">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/backend/project/entities/Asesor.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/backend/project/entities/Asesor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/backend/project/entities/ContratoXTrabajador.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/backend/project/entities/ContratoXTrabajador.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +114,7 @@
       <workItem from="1714353322026" duration="992000" />
       <workItem from="1714377624937" duration="5284000" />
       <workItem from="1714403576213" duration="7636000" />
-      <workItem from="1714451906016" duration="1806000" />
+      <workItem from="1714451906016" duration="2882000" />
     </task>
     <task id="LOCAL-00001" summary="Creación clases Salguero">
       <option name="closed" value="true" />
