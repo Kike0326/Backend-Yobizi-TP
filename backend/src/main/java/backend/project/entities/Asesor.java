@@ -21,4 +21,5 @@ public class Asesor implements Serializable {
     private String apellido_Asesor;
     @Column(name = "correo_Asesor",nullable = false,length = 100)
     private String correo_Asesor;
+
 }
