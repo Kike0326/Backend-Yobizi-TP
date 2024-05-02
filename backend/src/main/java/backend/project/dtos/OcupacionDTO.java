@@ -1,24 +1,20 @@
 package backend.project.dtos;
 
-import lombok.*;
 
-import javax.persistence.*;
-import java.io.Serializable;
+public class OcupacionDTO {
+   private Integer id_Ocupacion;
+   private String nombre_Ocupacion;
+   private String descripcion;
 
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
-@ToString
-@Entity
-@Builder
-@Table(name ="Ocupacion")
-public class OcupacionDTO implements Serializable {
-    @Id
-    @Column(name="id_Ocupacion")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id_Ocupacion;
-    @Column(name ="nombre_Ocupacion",nullable = false, length = 50)
-    private String nombre_Ocupacion;
-    @Column(name ="descripcion",nullable = false, length = 50)
-    private String descripcion;
+    public Integer getId_Ocupacion() {return id_Ocupacion;}
+
+    public void setId_Ocupacion(Integer id_Ocupacion) {this.id_Ocupacion = id_Ocupacion;}
+
+    public String getNombre_Ocupacion() {return nombre_Ocupacion;}
+
+    public void setNombre_Ocupacion(String nombre_Ocupacion) {this.nombre_Ocupacion = nombre_Ocupacion;}
+
+    public String getDescripcion() {return descripcion;}
+
+    public void setDescripcion(String descripcion) {this.descripcion = descripcion;}
 }

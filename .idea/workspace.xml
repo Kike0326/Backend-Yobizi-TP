@@ -5,18 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="758ae109-b322-4d56-a613-07b3a9b18ac7" name="Changes" comment="Actualizacion Entidad Contrato">
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/backend/project/controllers/AsesorController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/backend/project/controllers/ContratoXTrabajadorController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/backend/project/dtos/AsesorDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/backend/project/dtos/ContratoXTrabajadorDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/backend/project/repositories/AsesorRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/backend/project/repositories/ContratoXTrabajadorRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/backend/project/services/AsesorService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/backend/project/services/ContratoXTrabajadorService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/backend/project/servicesimpl/AsesorServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/backend/project/servicesimpl/ContratoXTrabajadorServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/backend/project/controllers/EmpleadorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/backend/project/controllers/EmpleadorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/backend/project/dtos/AsesorDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/backend/project/dtos/AsesorDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/backend/project/dtos/ContratoXTrabajadorDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/backend/project/dtos/ContratoXTrabajadorDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/backend/project/dtos/OcupacionDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/backend/project/dtos/OcupacionDTO.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,6 +119,7 @@
       <workItem from="1714451906016" duration="3068000" />
       <workItem from="1714527742910" duration="9566000" />
       <workItem from="1714618409000" duration="7205000" />
+      <workItem from="1714684623784" duration="2179000" />
     </task>
     <task id="LOCAL-00001" summary="Creación clases Salguero">
       <option name="closed" value="true" />
