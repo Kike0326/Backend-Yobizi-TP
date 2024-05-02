@@ -26,6 +26,7 @@ public class EmpleadorController {
     public Empleador update(@RequestBody Empleador empleador) {
         return empleadorService.save(empleador);
     }
+
     @DeleteMapping("empleador/eliminar/{id}")
     public void delete(@PathVariable Integer id) {
         Empleador empleador = empleadorService.findById(id);
