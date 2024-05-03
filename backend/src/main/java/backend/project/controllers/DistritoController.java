@@ -5,8 +5,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
+import java.util.stream.Collectors;
+import org.modelmapper.ModelMapper;
 
 @RestController
 @RequestMapping("/api")
@@ -36,9 +37,11 @@ public class DistritoController {
     }
 
     @GetMapping("distrito/todos")
-    public  ResponseEntity<List<Distrito>> findAll() {
-        List<Distrito> distrito = distritoService.findAllDistrito();
-        return new ResponseEntity<List<Distrito>>(distrito, HttpStatus.OK);
+    public List<Distrito> findAll() {
+        return distritoService.findAllDistrito().stream().map(x->{
+            ModelMapper m = new ModelMapper();
+            return m.map(x,Distrito.class);
+        }).collect(Collectors.toList());
     }
 
 }

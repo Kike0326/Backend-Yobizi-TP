@@ -4,22 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-<<<<<<< HEAD
     <list default="true" id="758ae109-b322-4d56-a613-07b3a9b18ac7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/8fdcf949-3ffb-42c1-9569-4431a01a18f7.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/8fdcf949-3ffb-42c1-9569-4431a01a18f7.xml" afterDir="false" />
-=======
-    <list default="true" id="758ae109-b322-4d56-a613-07b3a9b18ac7" name="Changes" comment="Actualizacion Entidad Distrito">
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/backend/project/controllers/ContratoController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/backend/project/controllers/DistritoController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/backend/project/repositories/ContratoRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/backend/project/repositories/DistritoRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/backend/project/services/ContratoService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/backend/project/services/DistritoService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/backend/project/servicesimpl/IContratoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/backend/project/servicesimpl/IDistritoImpl.java" afterDir="false" />
->>>>>>> parent of b884b9c (Métodos CRUD de 3 Contrato, Distrito y Empleador funcionando correctamente)
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/backend/project/controllers/ContratoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/backend/project/controllers/ContratoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/backend/project/controllers/DistritoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/backend/project/controllers/DistritoController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/backend/project/controllers/EmpleadorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/backend/project/controllers/EmpleadorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/backend/project/entities/Contrato.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/backend/project/entities/Contrato.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/backend/project/repositories/ContratoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/backend/project/repositories/ContratoRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/backend/project/repositories/DistritoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/backend/project/repositories/DistritoRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/backend/project/repositories/EmpleadorRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/backend/project/repositories/EmpleadorRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/backend/project/services/EmpleadorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/backend/project/services/EmpleadorService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/backend/project/servicesimpl/IContratoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/backend/project/servicesimpl/IContratoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/backend/project/servicesimpl/IDistritoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/backend/project/servicesimpl/IDistritoImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/backend/project/servicesimpl/IEmpleadorImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/backend/project/servicesimpl/IEmpleadorImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -102,7 +100,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.customizations",
+    "settings.editor.selected.configurable": "preferences.keymap",
     "vue.rearranger.settings.migration": "true"
 >>>>>>> parent of 776b9be (Merge pull request #1 from Kike0326/Sheyla)
   },
@@ -151,15 +149,11 @@
       <workItem from="1714353322026" duration="992000" />
       <workItem from="1714377624937" duration="5284000" />
 <<<<<<< HEAD
-<<<<<<< HEAD
       <workItem from="1714403576213" duration="23891000" />
       <workItem from="1714701276837" duration="205000" />
 =======
       <workItem from="1714403576213" duration="23763000" />
 >>>>>>> parent of 776b9be (Merge pull request #1 from Kike0326/Sheyla)
-=======
-      <workItem from="1714403576213" duration="17876000" />
->>>>>>> parent of b884b9c (Métodos CRUD de 3 Contrato, Distrito y Empleador funcionando correctamente)
     </task>
     <task id="LOCAL-00001" summary="Creación clases Salguero">
       <option name="closed" value="true" />
@@ -193,7 +187,6 @@
       <option name="project" value="LOCAL" />
       <updated>1714412370544</updated>
     </task>
-<<<<<<< HEAD
     <task id="LOCAL-00005" summary="Actualizacion Controllers Distrito y Contrato">
       <option name="closed" value="true" />
       <created>1714464164171</created>
@@ -211,9 +204,6 @@
       <updated>1714470083309</updated>
     </task>
     <option name="localTasksCounter" value="7" />
-=======
-    <option name="localTasksCounter" value="5" />
->>>>>>> parent of b884b9c (Métodos CRUD de 3 Contrato, Distrito y Empleador funcionando correctamente)
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -235,12 +225,8 @@
     <MESSAGE value="Actualización de Entidades y Desarrollo de la Clase Empleador" />
     <MESSAGE value="Actualizacion Entidad Contrato" />
     <MESSAGE value="Actualizacion Entidad Distrito" />
-<<<<<<< HEAD
     <MESSAGE value="Actualizacion Controllers Distrito y Contrato" />
     <MESSAGE value="Métodos CRUD de 3 Contrato, Distrito y Empleador funcionando correctamente" />
     <option name="LAST_COMMIT_MESSAGE" value="Métodos CRUD de 3 Contrato, Distrito y Empleador funcionando correctamente" />
-=======
-    <option name="LAST_COMMIT_MESSAGE" value="Actualizacion Entidad Distrito" />
->>>>>>> parent of b884b9c (Métodos CRUD de 3 Contrato, Distrito y Empleador funcionando correctamente)
   </component>
 </project>
