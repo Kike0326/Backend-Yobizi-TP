@@ -1,13 +1,12 @@
 package backend.project.controllers;
 import backend.project.entities.Empleador;
 import backend.project.services.EmpleadorService;
-import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
 import java.util.List;
-import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/api")
@@ -38,11 +37,9 @@ public class EmpleadorController {
     }
 
     @GetMapping("empleador/todos")
-    public List<Empleador> findAll() {
-        return empleadorService.findAllEmpleador().stream().map(x->{
-            ModelMapper m = new ModelMapper();
-            return m.map(x, Empleador.class);
-        }).collect(Collectors.toList());
+    public  ResponseEntity<List<Empleador>> findAll() {
+        List<Empleador> empleador = empleadorService.ListAllEmpleador();
+        return new ResponseEntity<List<Empleador>>(empleador, HttpStatus.OK);
     }
 
 

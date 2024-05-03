@@ -34,8 +34,8 @@ throw new EntityNotFoundException("No se encuentra Empleador con el siguiente id
     }
 
     @Override
-    public List<Empleador> findAllEmpleador() {
-        return empleadorRepository.findAll();
+    public List<Empleador> ListAllEmpleador() {
+        return List.of();
     }
 
     @Override

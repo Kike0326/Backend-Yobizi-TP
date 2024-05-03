@@ -1,4 +1,5 @@
 package backend.project.servicesimpl;
+
 import backend.project.entities.Distrito;
 import backend.project.repositories.DistritoRepository;
 import backend.project.services.DistritoService;
@@ -35,7 +36,7 @@ public class IDistritoImpl implements DistritoService {
 
     @Override
     public List<Distrito> findAllDistrito() {
-        return distritoRepository.findAll();
+        return List.of();
     }
 
 

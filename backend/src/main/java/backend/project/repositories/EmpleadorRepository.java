@@ -1,4 +1,5 @@
 package backend.project.repositories;
+
 import backend.project.entities.Empleador;
 import org.springframework.data.jpa.repository.JpaRepository;
 

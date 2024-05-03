@@ -9,7 +9,7 @@ public interface EmpleadorService {
     public Empleador save(Empleador empleador);
     public void delete(Empleador empleador);
     public Empleador findById(int id);
-    public List<Empleador> findAllEmpleador();
+    public List<Empleador> ListAllEmpleador();
     public List<Empleador> findEmpleadorByName(String name);
 }
 

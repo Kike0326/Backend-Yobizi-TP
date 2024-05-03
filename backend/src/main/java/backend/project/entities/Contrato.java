@@ -1,8 +1,8 @@
 package backend.project.entities;
 import lombok.*;
+
 import javax.persistence.*;
 import java.io.Serializable;
-import java.math.BigDecimal;
 import java.util.Date;
 @Data
 @AllArgsConstructor
@@ -22,8 +22,8 @@ public class Contrato implements Serializable{
     private Date fecha_Contrato;
     @Column(name ="estado_Contrato",nullable = false, length = 50)
     private String estado_Contrato;
-    @Column(name ="monto_Contrato",nullable = false)
-    private BigDecimal monto_Contrato;
+    @Column(name ="monto_Contrato",nullable = false, length = 50)
+    private Integer monto_Contrato;
     @ManyToOne
     @JoinColumn(name ="Empleador_id")
     private Empleador id_Empleador;
