@@ -1,0 +1,807 @@
+Index: backend/src/main/java/backend/project/controllers/EmpleadorController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package backend.project.controllers;\r\nimport backend.project.entities.Empleador;\r\nimport backend.project.services.EmpleadorService;\r\nimport org.modelmapper.ModelMapper;\r\nimport org.springframework.beans.factory.annotation.Autowired;\r\nimport org.springframework.http.HttpStatus;\r\nimport org.springframework.http.ResponseEntity;\r\nimport org.springframework.web.bind.annotation.*;\r\nimport java.util.List;\r\nimport java.util.stream.Collectors;\r\n\r\n@RestController\r\n@RequestMapping(\"/api\")\r\npublic class EmpleadorController {\r\n    @Autowired\r\n    private EmpleadorService empleadorService;\r\n\r\n    @PostMapping(\"empleador/registrar\")\r\n    public ResponseEntity<Empleador> create(@RequestBody Empleador empleador) {\r\n        Empleador nuevoEmpleador = empleadorService.save(empleador);\r\n      return new ResponseEntity<Empleador>(nuevoEmpleador, HttpStatus.CREATED);\r\n\r\n    }\r\n\r\n    @PutMapping(\"empleador/actualizar\")\r\n    public Empleador update(@RequestBody Empleador empleador) {\r\n        return empleadorService.save(empleador);\r\n    }\r\n    @DeleteMapping(\"empleador/eliminar/{id}\")\r\n    public void delete(@PathVariable Integer id) {\r\n        Empleador empleador = empleadorService.findById(id);\r\n        empleadorService.delete(empleador);\r\n    }\r\n\r\n    @GetMapping(\"empleador/{id}\")\r\n    public Empleador findById(@PathVariable Integer id) {\r\n        return empleadorService.findById(id);\r\n    }\r\n\r\n    @GetMapping(\"empleador/todos\")\r\n    public List<Empleador> findAll() {\r\n        return empleadorService.findAllEmpleador().stream().map(x->{\r\n            ModelMapper m = new ModelMapper();\r\n            return m.map(x, Empleador.class);\r\n        }).collect(Collectors.toList());\r\n    }\r\n\r\n\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/backend/src/main/java/backend/project/controllers/EmpleadorController.java b/backend/src/main/java/backend/project/controllers/EmpleadorController.java
+--- a/backend/src/main/java/backend/project/controllers/EmpleadorController.java	(revision 48f0453c1aa0222c5f8110f63397b4274467729f)
++++ b/backend/src/main/java/backend/project/controllers/EmpleadorController.java	(date 1714713320920)
+@@ -26,6 +26,7 @@
+     public Empleador update(@RequestBody Empleador empleador) {
+         return empleadorService.save(empleador);
+     }
++
+     @DeleteMapping("empleador/eliminar/{id}")
+     public void delete(@PathVariable Integer id) {
+         Empleador empleador = empleadorService.findById(id);
+Index: backend/src/main/java/backend/project/entities/Ocupacion.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package backend.project.entities;\r\n\r\npublic class Ocupacion {\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/backend/src/main/java/backend/project/entities/Ocupacion.java b/backend/src/main/java/backend/project/entities/Ocupacion.java
+--- a/backend/src/main/java/backend/project/entities/Ocupacion.java	(revision 48f0453c1aa0222c5f8110f63397b4274467729f)
++++ b/backend/src/main/java/backend/project/entities/Ocupacion.java	(date 1714713320940)
+@@ -1,4 +1,24 @@
+ package backend.project.entities;
++import lombok.*;
++
++import javax.persistence.*;
++import java.io.Serializable;
+ 
+-public class Ocupacion {
++@Data
++@AllArgsConstructor
++@NoArgsConstructor
++@ToString
++@Entity
++@Builder
++@Table(name ="Ocupacion")
++public class Ocupacion implements Serializable {
++
++    @Id
++    @Column(name ="id_Ocupacion")
++    @GeneratedValue(strategy = GenerationType.IDENTITY)
++    private Integer id_Ocupacion;
++    @Column(name ="nombre_Ocupacion",nullable = false, length = 50)
++    private String nombre_Ocupacion;
++    @Column(name ="descripcion",nullable = false, length = 50)
++    private String descripcion;
+ }
+Index: backend/src/main/java/backend/project/entities/Trabajador.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package backend.project.entities;\r\n\r\npublic class Trabajador {\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/backend/src/main/java/backend/project/entities/Trabajador.java b/backend/src/main/java/backend/project/entities/Trabajador.java
+--- a/backend/src/main/java/backend/project/entities/Trabajador.java	(revision 48f0453c1aa0222c5f8110f63397b4274467729f)
++++ b/backend/src/main/java/backend/project/entities/Trabajador.java	(date 1714713320941)
+@@ -1,4 +1,18 @@
+ package backend.project.entities;
++import lombok.*;
+ 
+-public class Trabajador {
++import javax.persistence.*;
++import java.io.Serializable;
++@Data
++@AllArgsConstructor
++@NoArgsConstructor
++@ToString
++@Entity
++@Builder
++@Table(name="Trabajador")
++public class Trabajador implements Serializable {
++    @Id
++    @Column(name="id_Trabajador")
++    @GeneratedValue(strategy = GenerationType.IDENTITY)
++    private Integer id_Trabajador;
+ }
+Index: backend/src/main/java/backend/project/repositories/OcupacionRepository.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/backend/src/main/java/backend/project/repositories/OcupacionRepository.java b/backend/src/main/java/backend/project/repositories/OcupacionRepository.java
+new file mode 100644
+--- /dev/null	(date 1714713320946)
++++ b/backend/src/main/java/backend/project/repositories/OcupacionRepository.java	(date 1714713320946)
+@@ -0,0 +1,7 @@
++package backend.project.repositories;
++
++import backend.project.entities.Ocupacion;
++import org.springframework.data.jpa.repository.JpaRepository;
++
++public interface OcupacionRepository extends JpaRepository<Ocupacion, Integer> {
++}
+Index: backend/src/main/java/backend/project/repositories/ContratoXTrabajadorRepository.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/backend/src/main/java/backend/project/repositories/ContratoXTrabajadorRepository.java b/backend/src/main/java/backend/project/repositories/ContratoXTrabajadorRepository.java
+new file mode 100644
+--- /dev/null	(date 1714713320945)
++++ b/backend/src/main/java/backend/project/repositories/ContratoXTrabajadorRepository.java	(date 1714713320945)
+@@ -0,0 +1,8 @@
++package backend.project.repositories;
++
++import backend.project.entities.ContratoXTrabajador;
++import org.springframework.data.jpa.repository.JpaRepository;
++
++public interface ContratoXTrabajadorRepository extends JpaRepository<ContratoXTrabajador, Integer> {
++    // aca se colocaran los querys
++}
+Index: backend/src/main/java/backend/project/repositories/AsesorRepository.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/backend/src/main/java/backend/project/repositories/AsesorRepository.java b/backend/src/main/java/backend/project/repositories/AsesorRepository.java
+new file mode 100644
+--- /dev/null	(date 1714713320944)
++++ b/backend/src/main/java/backend/project/repositories/AsesorRepository.java	(date 1714713320944)
+@@ -0,0 +1,7 @@
++package backend.project.repositories;
++
++import backend.project.entities.Asesor;
++import org.springframework.data.jpa.repository.JpaRepository;
++
++public interface AsesorRepository extends JpaRepository<Asesor, Integer> {
++}
+Index: backend/src/main/java/backend/project/dtos/AsesorDTO.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/backend/src/main/java/backend/project/dtos/AsesorDTO.java b/backend/src/main/java/backend/project/dtos/AsesorDTO.java
+new file mode 100644
+--- /dev/null	(date 1714713320926)
++++ b/backend/src/main/java/backend/project/dtos/AsesorDTO.java	(date 1714713320926)
+@@ -0,0 +1,31 @@
++package backend.project.dtos;
++
++public class AsesorDTO {
++    private Integer id_Asesor;
++    private String nombre_Asesor;
++    private String apellido_Asesor;
++
++    public Integer getId_Asesor() {
++        return id_Asesor;
++    }
++
++    public void setId_Asesor(Integer id_Asesor) {
++        this.id_Asesor = id_Asesor;
++    }
++
++    public String getNombre_Asesor() {
++        return nombre_Asesor;
++    }
++
++    public void setNombre_Asesor(String nombre_Asesor) {
++        this.nombre_Asesor = nombre_Asesor;
++    }
++
++    public String getApellido_Asesor() {
++        return apellido_Asesor;
++    }
++
++    public void setApellido_Asesor(String apellido_Asesor) {
++        this.apellido_Asesor = apellido_Asesor;
++    }
++}
+Index: backend/src/main/java/backend/project/servicesimpl/OcupacionServiceImpl.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/backend/src/main/java/backend/project/servicesimpl/OcupacionServiceImpl.java b/backend/src/main/java/backend/project/servicesimpl/OcupacionServiceImpl.java
+new file mode 100644
+--- /dev/null	(date 1714713320962)
++++ b/backend/src/main/java/backend/project/servicesimpl/OcupacionServiceImpl.java	(date 1714713320962)
+@@ -0,0 +1,39 @@
++package backend.project.servicesimpl;
++
++import backend.project.entities.Ocupacion;
++import backend.project.repositories.OcupacionRepository;
++import backend.project.services.OcupacionService;
++import org.springframework.beans.factory.annotation.Autowired;
++import org.springframework.stereotype.Service;
++
++import javax.persistence.EntityNotFoundException;
++import java.util.List;
++
++@Service
++public class OcupacionServiceImpl implements OcupacionService {
++    @Autowired
++    OcupacionRepository ocupacionRepository;
++
++    @Override
++    public Ocupacion save(Ocupacion ocupacion) {return ocupacionRepository.save(ocupacion);}
++
++    @Override
++    public void delete(Ocupacion ocupacion){
++    }
++    @Override
++    public List<Ocupacion>ListAllOcupacion(){return List.of();}
++
++    @Override
++    public List<Ocupacion>findOcupacionByName(String name){return List.of();}
++    @Override
++    public Ocupacion findById(int id) {
++        Ocupacion ocupacion = ocupacionRepository.findById(id).orElse(null);
++        System.out.println(id);
++        if (ocupacion == null) {
++            throw new EntityNotFoundException("No se encuentran ocupaciones con el siguiente id: "+String.valueOf(id));
++
++        }
++        return ocupacion;
++    }
++
++}
+Index: backend/src/main/java/backend/project/servicesimpl/ContratoXTrabajadorServiceImpl.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/backend/src/main/java/backend/project/servicesimpl/ContratoXTrabajadorServiceImpl.java b/backend/src/main/java/backend/project/servicesimpl/ContratoXTrabajadorServiceImpl.java
+new file mode 100644
+--- /dev/null	(date 1714713320959)
++++ b/backend/src/main/java/backend/project/servicesimpl/ContratoXTrabajadorServiceImpl.java	(date 1714713320959)
+@@ -0,0 +1,48 @@
++package backend.project.servicesimpl;
++
++import backend.project.entities.ContratoXTrabajador;
++import backend.project.repositories.ContratoXTrabajadorRepository;
++import backend.project.services.ContratoXTrabajadorService;
++import org.springframework.beans.factory.annotation.Autowired;
++import org.springframework.stereotype.Service;
++
++import javax.persistence.EntityNotFoundException;
++import java.util.List;
++
++@Service
++public class ContratoXTrabajadorServiceImpl implements ContratoXTrabajadorService {
++
++    @Autowired
++    private ContratoXTrabajadorRepository contratoXTrabajadorRepository;
++
++    @Override
++    public ContratoXTrabajador save(ContratoXTrabajador contratoXTrabajador) {
++        return contratoXTrabajadorRepository.save(contratoXTrabajador);
++    }
++
++    @Override
++    public void delete(ContratoXTrabajador contratoXTrabajador) {
++
++    }
++
++    @Override
++    public ContratoXTrabajador findById(int id) {
++        ContratoXTrabajador contratoXTrabajador = contratoXTrabajadorRepository.findById(id).orElse(null);
++        System.out.println(id);
++        if (contratoXTrabajador == null) {
++            throw new EntityNotFoundException("No se encuentra contrato por trabajador con el siguiente id: "+String.valueOf(id));
++
++        }
++        return contratoXTrabajador;
++    }
++
++    @Override
++    public List<ContratoXTrabajador> ListAllContratoXTrabajador() {
++        return List.of();
++    }
++
++    @Override
++    public List<ContratoXTrabajador> findContratoXTrabajadorByName(String name) {
++        return List.of();
++    }
++}
+Index: backend/src/main/java/backend/project/dtos/ContratoXTrabajadorDTO.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/backend/src/main/java/backend/project/dtos/ContratoXTrabajadorDTO.java b/backend/src/main/java/backend/project/dtos/ContratoXTrabajadorDTO.java
+new file mode 100644
+--- /dev/null	(date 1714713320927)
++++ b/backend/src/main/java/backend/project/dtos/ContratoXTrabajadorDTO.java	(date 1714713320927)
+@@ -0,0 +1,52 @@
++package backend.project.dtos;
++
++import backend.project.entities.Contrato;
++import backend.project.entities.Ocupacion;
++
++public class ContratoXTrabajadorDTO {
++    private Integer id_ContratoXTrabajador;
++    private boolean estado_ContratoXTrabajador;
++    private String descripcion_actividad;
++    private Contrato contrato;
++    private Ocupacion ocupacion;
++
++    public Integer getId_ContratoXTrabajador() {
++        return id_ContratoXTrabajador;
++    }
++
++    public void setId_ContratoXTrabajador(Integer id_ContratoXTrabajador) {
++        this.id_ContratoXTrabajador = id_ContratoXTrabajador;
++    }
++
++    public boolean isEstado_ContratoXTrabajador() {
++        return estado_ContratoXTrabajador;
++    }
++
++    public void setEstado_ContratoXTrabajador(boolean estado_ContratoXTrabajador) {
++        this.estado_ContratoXTrabajador = estado_ContratoXTrabajador;
++    }
++
++    public String getDescripcion_actividad() {
++        return descripcion_actividad;
++    }
++
++    public void setDescripcion_actividad(String descripcion_actividad) {
++        this.descripcion_actividad = descripcion_actividad;
++    }
++
++    public Contrato getContrato() {
++        return contrato;
++    }
++
++    public void setContrato(Contrato contrato) {
++        this.contrato = contrato;
++    }
++
++    public Ocupacion getOcupacion() {
++        return ocupacion;
++    }
++
++    public void setOcupacion(Ocupacion ocupacion) {
++        this.ocupacion = ocupacion;
++    }
++}
+Index: backend/src/main/java/backend/project/dtos/OcupacionDTO.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/backend/src/main/java/backend/project/dtos/OcupacionDTO.java b/backend/src/main/java/backend/project/dtos/OcupacionDTO.java
+new file mode 100644
+--- /dev/null	(date 1714713320928)
++++ b/backend/src/main/java/backend/project/dtos/OcupacionDTO.java	(date 1714713320928)
+@@ -0,0 +1,20 @@
++package backend.project.dtos;
++
++
++public class OcupacionDTO {
++   private Integer id_Ocupacion;
++   private String nombre_Ocupacion;
++   private String descripcion;
++
++    public Integer getId_Ocupacion() {return id_Ocupacion;}
++
++    public void setId_Ocupacion(Integer id_Ocupacion) {this.id_Ocupacion = id_Ocupacion;}
++
++    public String getNombre_Ocupacion() {return nombre_Ocupacion;}
++
++    public void setNombre_Ocupacion(String nombre_Ocupacion) {this.nombre_Ocupacion = nombre_Ocupacion;}
++
++    public String getDescripcion() {return descripcion;}
++
++    public void setDescripcion(String descripcion) {this.descripcion = descripcion;}
++}
+Index: backend/src/main/java/backend/project/servicesimpl/AsesorServiceImpl.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/backend/src/main/java/backend/project/servicesimpl/AsesorServiceImpl.java b/backend/src/main/java/backend/project/servicesimpl/AsesorServiceImpl.java
+new file mode 100644
+--- /dev/null	(date 1714713320958)
++++ b/backend/src/main/java/backend/project/servicesimpl/AsesorServiceImpl.java	(date 1714713320958)
+@@ -0,0 +1,49 @@
++package backend.project.servicesimpl;
++
++import backend.project.entities.Asesor;
++import backend.project.repositories.AsesorRepository;
++import backend.project.services.AsesorService;
++import org.springframework.beans.factory.annotation.Autowired;
++import org.springframework.stereotype.Service;
++
++import javax.persistence.EntityNotFoundException;
++import java.util.List;
++
++@Service
++public class AsesorServiceImpl implements AsesorService {
++
++    @Autowired
++    private AsesorRepository asesorRepository;
++
++    @Override
++    public Asesor save(Asesor asesor) {
++        return asesorRepository.save(asesor);
++    }
++
++    @Override
++    public void delete(Asesor asesor) {
++
++    }
++
++    @Override
++    public Asesor findById(int id) {
++        Asesor asesor = asesorRepository.findById(id).orElse(null);
++        System.out.println(id);
++        if (asesor == null) {
++            throw new EntityNotFoundException("No se encuentra asesor con el siguiente id: "+String.valueOf(id));
++
++        }
++        return asesor;
++    }
++
++    @Override
++    public List<Asesor> ListAllAsesor() {
++        return List.of();
++    }
++
++    @Override
++    public List<Asesor> findAsesorByName(String name) {
++        return List.of();
++    }
++
++}
+Index: backend/src/main/resources/application.properties
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>server.port=8080\r\nspring.datasource.url=jdbc:postgresql://localhost:5432/Yobizi_db\r\nspring.datasource.username=postgres\r\nspring.datasource.password=1234\r\nspring.datasource.driver-class-name=org.postgresql.Driver\r\n\r\n\r\n\r\nspring.jpa.show-sql=true\r\nspring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect\r\nspring.jpa.hibernate.ddl-auto=update\r\n#Al primer arranque correr con linea 13(create-drop), para los siguientes usar linea 3 (update)\r\n#spring.jpa.hibernate.ddl-auto=create-drop\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>ISO-8859-1
+===================================================================
+diff --git a/backend/src/main/resources/application.properties b/backend/src/main/resources/application.properties
+--- a/backend/src/main/resources/application.properties	(revision 48f0453c1aa0222c5f8110f63397b4274467729f)
++++ b/backend/src/main/resources/application.properties	(date 1714713320963)
+@@ -1,7 +1,7 @@
+ server.port=8080
+ spring.datasource.url=jdbc:postgresql://localhost:5432/Yobizi_db
+ spring.datasource.username=postgres
+-spring.datasource.password=1234
++spring.datasource.password=2248
+ spring.datasource.driver-class-name=org.postgresql.Driver
+ 
+ 
+Index: backend/src/main/java/backend/project/controllers/OcupacionController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/backend/src/main/java/backend/project/controllers/OcupacionController.java b/backend/src/main/java/backend/project/controllers/OcupacionController.java
+new file mode 100644
+--- /dev/null	(date 1714713320924)
++++ b/backend/src/main/java/backend/project/controllers/OcupacionController.java	(date 1714713320924)
+@@ -0,0 +1,45 @@
++package backend.project.controllers;
++
++
++import backend.project.entities.Ocupacion;
++import backend.project.services.OcupacionService;
++import org.springframework.beans.factory.annotation.Autowired;
++import org.springframework.http.HttpStatus;
++import org.springframework.http.ResponseEntity;
++import org.springframework.web.bind.annotation.*;
++
++import java.util.List;
++
++@RestController
++@RequestMapping("/ocupaciones")
++public class OcupacionController {
++    @Autowired
++    private OcupacionService ocupacionService;
++
++    @PostMapping("ocupacion/registrar")
++    public ResponseEntity<Ocupacion> create(@RequestBody Ocupacion ocupacion) {
++        Ocupacion nuevoOcupacion = ocupacionService.save(ocupacion);
++        return new ResponseEntity<Ocupacion>(nuevoOcupacion, HttpStatus.CREATED);
++    }
++
++    @PutMapping("ocupacion/actualizar")
++    public Ocupacion update(@RequestBody Ocupacion ocupacion) {
++        return ocupacionService.save(ocupacion);
++    }
++
++    @DeleteMapping("ocupacion/eliminar/{id}")
++    public void delete(@PathVariable Integer id) {
++        Ocupacion ocupacion = ocupacionService.findById(id);
++        ocupacionService.delete(ocupacion);
++    }
++    @GetMapping("ocupacion/{id}")
++    public Ocupacion findById(@PathVariable Integer id) {
++        return ocupacionService.findById(id);
++    }
++
++    @GetMapping("ocupacion/todos")
++    public  ResponseEntity<List<Ocupacion>> findAll() {
++        List<Ocupacion> ocupacion = ocupacionService.ListAllOcupacion();
++        return new ResponseEntity<List<Ocupacion>>(ocupacion, HttpStatus.OK);
++    }
++}
+Index: backend/src/main/java/backend/project/controllers/ContratoXTrabajadorController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/backend/src/main/java/backend/project/controllers/ContratoXTrabajadorController.java b/backend/src/main/java/backend/project/controllers/ContratoXTrabajadorController.java
+new file mode 100644
+--- /dev/null	(date 1714713320901)
++++ b/backend/src/main/java/backend/project/controllers/ContratoXTrabajadorController.java	(date 1714713320901)
+@@ -0,0 +1,46 @@
++package backend.project.controllers;
++import backend.project.entities.ContratoXTrabajador;
++import backend.project.services.ContratoXTrabajadorService;
++import org.springframework.beans.factory.annotation.Autowired;
++import org.springframework.http.HttpStatus;
++import org.springframework.http.ResponseEntity;
++import org.springframework.web.bind.annotation.*;
++
++import java.util.List;
++
++
++@RestController
++@RequestMapping("/ContratoXTrabajadores")
++public class ContratoXTrabajadorController {
++    @Autowired
++    ContratoXTrabajadorService contratoXTrabajadorService;
++
++    @PostMapping("ContratoXTrabajador/registrar")
++    public ResponseEntity<ContratoXTrabajador> create(@RequestBody ContratoXTrabajador contratoXTrabajador) {
++        ContratoXTrabajador nuevoContratoXTrabajador= contratoXTrabajadorService.save(contratoXTrabajador);
++        return new ResponseEntity<ContratoXTrabajador>(nuevoContratoXTrabajador, HttpStatus.CREATED);
++
++    }
++
++    @PutMapping("ContratoXTrabajador/actualizar")
++    public ContratoXTrabajador update(@RequestBody ContratoXTrabajador contratoXTrabajador) {
++        return contratoXTrabajadorService.save(contratoXTrabajador);
++    }
++
++    @DeleteMapping("ContratoXTrabajador/eliminar/{id}")
++    public void delete(@PathVariable Integer id) {
++        ContratoXTrabajador contratoXTrabajador = contratoXTrabajadorService.findById(id);
++        contratoXTrabajadorService.delete(contratoXTrabajador);
++    }
++
++    @GetMapping("ContratoXTrabajador/{id}")
++    public ContratoXTrabajador findById(@PathVariable Integer id) {
++        return contratoXTrabajadorService.findById(id);
++    }
++
++    @GetMapping("ContratoXTrabajador/todos")
++    public  ResponseEntity<List<ContratoXTrabajador>> findAll() {
++        List<ContratoXTrabajador> contratoXTrabajadors = contratoXTrabajadorService.ListAllContratoXTrabajador();
++        return new ResponseEntity<List<ContratoXTrabajador>>(contratoXTrabajadors, HttpStatus.OK);
++    }
++}
+Index: backend/src/main/java/backend/project/entities/ContratoXTrabajador.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package backend.project.entities;\r\n\r\npublic class ContratoXTrabajador {\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/backend/src/main/java/backend/project/entities/ContratoXTrabajador.java b/backend/src/main/java/backend/project/entities/ContratoXTrabajador.java
+--- a/backend/src/main/java/backend/project/entities/ContratoXTrabajador.java	(revision 48f0453c1aa0222c5f8110f63397b4274467729f)
++++ b/backend/src/main/java/backend/project/entities/ContratoXTrabajador.java	(date 1714713320934)
+@@ -1,4 +1,30 @@
+ package backend.project.entities;
+ 
+-public class ContratoXTrabajador {
++import lombok.*;
++
++import javax.persistence.*;
++import java.io.Serializable;
++
++@Data
++@AllArgsConstructor
++@NoArgsConstructor
++@ToString
++@Entity
++@Builder
++@Table(name ="ContratoXTrabajador")
++public class ContratoXTrabajador implements Serializable {
++    @Id
++    @Column(name = "id_ContratoXTrabajador")
++    @GeneratedValue(strategy = GenerationType.IDENTITY)
++    private Integer id_ContratoXTrabajador;
++    @Column(name = "estado_ContratoXTrabajador",nullable = false)
++    private boolean estado_ContratoXTrabajador;
++    @Column(name="descripcion_actividad",nullable = false,length = 100)
++    private String descripcion_actividad;
++    @ManyToOne
++    @JoinColumn(name="id_Contrato",nullable = false)
++    private Contrato contrato;
++    @ManyToOne
++    @JoinColumn(name="id_Ocupacion", nullable = false)
++    private Ocupacion ocupacion;
+ }
+Index: backend/src/main/java/backend/project/services/AsesorService.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/backend/src/main/java/backend/project/services/AsesorService.java b/backend/src/main/java/backend/project/services/AsesorService.java
+new file mode 100644
+--- /dev/null	(date 1714713320950)
++++ b/backend/src/main/java/backend/project/services/AsesorService.java	(date 1714713320950)
+@@ -0,0 +1,17 @@
++package backend.project.services;
++
++import backend.project.entities.Asesor;
++
++import java.util.List;
++
++public interface AsesorService {
++    Asesor save(Asesor asesor);
++
++    void delete(Asesor asesor);
++
++    Asesor findById(int id);
++
++    List<Asesor> ListAllAsesor();
++
++    List<Asesor> findAsesorByName(String name);
++}
+Index: backend/src/main/java/backend/project/entities/Users.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package backend.project.entities;\r\n\r\npublic class Users {\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/backend/src/main/java/backend/project/entities/Users.java b/backend/src/main/java/backend/project/entities/Users.java
+--- a/backend/src/main/java/backend/project/entities/Users.java	(revision 48f0453c1aa0222c5f8110f63397b4274467729f)
++++ b/backend/src/main/java/backend/project/entities/Users.java	(date 1714713320942)
+@@ -1,4 +1,13 @@
+ package backend.project.entities;
++import lombok.*;
+ 
+-public class Users {
++import javax.persistence.*;
++import java.io.Serializable;
++@Entity
++@Table (name = "Users")
++public class Users implements Serializable {
++    @Id
++    @Column (name="id_Users")
++    @GeneratedValue(strategy = GenerationType.IDENTITY)
++    private int id_Users;
+ }
+Index: backend/src/main/java/backend/project/services/ContratoXTrabajadorService.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/backend/src/main/java/backend/project/services/ContratoXTrabajadorService.java b/backend/src/main/java/backend/project/services/ContratoXTrabajadorService.java
+new file mode 100644
+--- /dev/null	(date 1714713320952)
++++ b/backend/src/main/java/backend/project/services/ContratoXTrabajadorService.java	(date 1714713320952)
+@@ -0,0 +1,17 @@
++package backend.project.services;
++
++import backend.project.entities.ContratoXTrabajador;
++
++import java.util.List;
++
++public interface ContratoXTrabajadorService {
++    ContratoXTrabajador save(ContratoXTrabajador contratoXTrabajador);
++
++    void delete(ContratoXTrabajador contratoXTrabajador);
++
++    ContratoXTrabajador findById(int id);
++
++    List<ContratoXTrabajador> ListAllContratoXTrabajador();
++
++    List<ContratoXTrabajador> findContratoXTrabajadorByName(String name);
++}
+Index: backend/src/main/java/backend/project/services/OcupacionService.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/backend/src/main/java/backend/project/services/OcupacionService.java b/backend/src/main/java/backend/project/services/OcupacionService.java
+new file mode 100644
+--- /dev/null	(date 1714713320954)
++++ b/backend/src/main/java/backend/project/services/OcupacionService.java	(date 1714713320954)
+@@ -0,0 +1,17 @@
++package backend.project.services;
++
++import backend.project.entities.Ocupacion;
++
++import java.util.List;
++
++public interface OcupacionService {
++    Ocupacion save(Ocupacion ocupacion);
++
++    void delete(Ocupacion ocupacion);
++
++    List<Ocupacion> ListAllOcupacion();
++
++    List<Ocupacion>findOcupacionByName(String name);
++
++    Ocupacion findById(int id);
++}
+Index: backend/src/main/java/backend/project/entities/Asesor.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package backend.project.entities;\r\n\r\npublic class Asesor {\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/backend/src/main/java/backend/project/entities/Asesor.java b/backend/src/main/java/backend/project/entities/Asesor.java
+--- a/backend/src/main/java/backend/project/entities/Asesor.java	(revision 48f0453c1aa0222c5f8110f63397b4274467729f)
++++ b/backend/src/main/java/backend/project/entities/Asesor.java	(date 1714713320929)
+@@ -1,4 +1,25 @@
+ package backend.project.entities;
+ 
+-public class Asesor {
++import lombok.*;
++import javax.persistence.*;
++import java.io.Serializable;
++@Data
++@AllArgsConstructor
++@NoArgsConstructor
++@ToString
++@Entity
++@Builder
++@Table(name ="Asesor")
++public class Asesor implements Serializable {
++    @Id
++    @Column(name = "id_Asesor")
++    @GeneratedValue(strategy = GenerationType.IDENTITY)
++    private Integer id_Asesor;
++    @Column(name ="nombre_Asesor",nullable = false,length = 50)
++    private String nombre_Asesor;
++    @Column(name="apellido_Asesor",nullable = false,length = 100)
++    private String apellido_Asesor;
++    @Column(name = "correo_Asesor",nullable = false,length = 100)
++    private String correo_Asesor;
++
+ }
+Index: backend/src/main/java/backend/project/controllers/AsesorController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/backend/src/main/java/backend/project/controllers/AsesorController.java b/backend/src/main/java/backend/project/controllers/AsesorController.java
+new file mode 100644
+--- /dev/null	(date 1714713320898)
++++ b/backend/src/main/java/backend/project/controllers/AsesorController.java	(date 1714713320898)
+@@ -0,0 +1,47 @@
++package backend.project.controllers;
++import backend.project.entities.Asesor;
++import backend.project.entities.Empleador;
++import backend.project.services.AsesorService;
++import backend.project.services.EmpleadorService;
++import org.springframework.beans.factory.annotation.Autowired;
++import org.springframework.http.HttpStatus;
++import org.springframework.http.ResponseEntity;
++import org.springframework.web.bind.annotation.*;
++
++import java.util.List;
++
++
++@RestController
++@RequestMapping("/asesores")
++public class AsesorController {
++    @Autowired
++    private AsesorService asesorService;
++
++    @PostMapping("asesor/registrar")
++    public ResponseEntity<Asesor> create(@RequestBody Asesor asesor) {
++        Asesor nuevoAsesor = asesorService.save(asesor);
++        return new ResponseEntity<Asesor>(nuevoAsesor, HttpStatus.CREATED);
++
++    }
++
++    @PutMapping("asesor/actualizar")
++    public Asesor update(@RequestBody Asesor asesor) {
++        return asesorService.save(asesor);
++    }
++    @DeleteMapping("asesor/eliminar/{id}")
++    public void delete(@PathVariable Integer id) {
++        Asesor asesor = asesorService.findById(id);
++        asesorService.delete(asesor);
++    }
++
++    @GetMapping("asesor/{id}")
++    public Asesor findById(@PathVariable Integer id) {
++        return asesorService.findById(id);
++    }
++
++    @GetMapping("asesor/todos")
++    public  ResponseEntity<List<Asesor>> findAll() {
++        List<Asesor> asesor = asesorService.ListAllAsesor();
++        return new ResponseEntity<List<Asesor>>(asesor, HttpStatus.OK);
++    }
++}
