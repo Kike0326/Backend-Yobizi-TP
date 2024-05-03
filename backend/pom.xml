@@ -30,9 +30,6 @@
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 
-
-
-
 		<dependency>
 			<groupId>org.postgresql</groupId>
 			<artifactId>postgresql</artifactId>
@@ -76,7 +73,12 @@
 			<artifactId>spring-boot-starter-security</artifactId>
 		</dependency>
 		-->
-
+		<!-- https://mvnrepository.com/artifact/org.modelmapper/modelmapper -->
+		<dependency>
+			<groupId>org.modelmapper</groupId>
+			<artifactId>modelmapper</artifactId>
+			<version>3.1.1</version>
+		</dependency>
 
 		<!-- Libreria utilitaria para generar y validar JWTs -->
 

@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="758ae109-b322-4d56-a613-07b3a9b18ac7" name="Changes" comment="Actualizacion Entidad Contrato">
+    <list default="true" id="758ae109-b322-4d56-a613-07b3a9b18ac7" name="Changes" comment="Actualizacion Controllers Distrito y Contrato">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/8fdcf949-3ffb-42c1-9569-4431a01a18f7.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/8fdcf949-3ffb-42c1-9569-4431a01a18f7.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/8fdcf949-3ffb-42c1-9569-4431a01a18f7/storage_v2/_src_/database/Yobizi_db.sfOkkA/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/8fdcf949-3ffb-42c1-9569-4431a01a18f7/storage_v2/_src_/database/Yobizi_db.sfOkkA/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/backend/project/dtos/AsesorDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/backend/project/dtos/AsesorDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/backend/project/dtos/ContratoXTrabajadorDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/backend/project/dtos/ContratoXTrabajadorDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/backend/project/dtos/OcupacionDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/backend/project/dtos/OcupacionDTO.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,24 +51,6 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Spring Boot.BackendApplication.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Usuario/Desktop/demoAPI&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
     &quot;DatabaseDriversLRU&quot;: [
@@ -115,11 +96,6 @@
       <workItem from="1714343237527" duration="5890000" />
       <workItem from="1714353322026" duration="992000" />
       <workItem from="1714377624937" duration="5284000" />
-      <workItem from="1714403576213" duration="7636000" />
-      <workItem from="1714451906016" duration="3068000" />
-      <workItem from="1714527742910" duration="9566000" />
-      <workItem from="1714618409000" duration="7205000" />
-      <workItem from="1714684623784" duration="2179000" />
     </task>
     <task id="LOCAL-00001" summary="Creación clases Salguero">
       <option name="closed" value="true" />
@@ -145,7 +121,23 @@
       <option name="project" value="LOCAL" />
       <updated>1714411207438</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Actualizacion Entidad Distrito">
+      <option name="closed" value="true" />
+      <created>1714412370544</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1714412370544</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Actualizacion Controllers Distrito y Contrato">
+      <option name="closed" value="true" />
+      <created>1714464164171</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1714464164172</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -155,6 +147,8 @@
     <MESSAGE value="Creación clases Salguero" />
     <MESSAGE value="Actualización de Entidades y Desarrollo de la Clase Empleador" />
     <MESSAGE value="Actualizacion Entidad Contrato" />
-    <option name="LAST_COMMIT_MESSAGE" value="Actualizacion Entidad Contrato" />
+    <MESSAGE value="Actualizacion Entidad Distrito" />
+    <MESSAGE value="Actualizacion Controllers Distrito y Contrato" />
+    <option name="LAST_COMMIT_MESSAGE" value="Actualizacion Controllers Distrito y Contrato" />
   </component>
 </project>

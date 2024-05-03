@@ -20,13 +20,12 @@ public class IEmpleadorImpl implements EmpleadorService {
 
     @Override
     public void delete(Empleador empleador) {
-
+    empleadorRepository.delete(empleador);
     }
 
     @Override
     public Empleador findById(int id) {
         Empleador empleador = empleadorRepository.findById(id).orElse(null);
-        System.out.println(id);
         if (empleador == null) {
 throw new EntityNotFoundException("No se encuentra Empleador con el siguiente id: "+String.valueOf(id));
 
@@ -35,8 +34,8 @@ throw new EntityNotFoundException("No se encuentra Empleador con el siguiente id
     }
 
     @Override
-    public List<Empleador> ListAllEmpleador() {
-        return List.of();
+    public List<Empleador> findAllEmpleador() {
+        return empleadorRepository.findAll();
     }
 
     @Override
